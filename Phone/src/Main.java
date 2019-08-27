@@ -5,6 +5,7 @@ public class Main {
         System.out.println(phone.weight + " " + phone.price);
         phone.dispalyValues();
         phone.discountMethod();
+        phone.extraPrice(150);
         String parameters = phone.getParameters();
         System.out.println(parameters);
     }
@@ -26,6 +27,11 @@ class MobilePhone {
     public void discountMethod(){
         double discount = price - (0.1 * price);
         System.out.println("Cena po zniżce 10%: " + discount);
+    }
+
+    public void extraPrice(int extraPrice){
+        int suma = price + extraPrice;
+        System.out.println("Wyższa kwota: " + suma);
     }
 
     public String getParameters() {
